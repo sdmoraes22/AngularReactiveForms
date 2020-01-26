@@ -1,0 +1,48 @@
+<div class="container main-container">
+    <h4>Demo Cadastro</h4>
+    <hr />
+    <form novalidade (ngSubmit)="adicionarUsuario()" [formGroup]="cadastroForm">
+        <div class="form-horizontal">
+            <div class="form-group">
+                <label for="" class="col-md-2 control-label" for="nome">Nome</label>
+                <div class="col-md-10">
+                    <input class="form-control" type="text" id="nome" placeholder="Nome (Requerido)" formControlName="nome" />
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="" class="col-md-2 control-label" for="cpf">CPF</label>
+                <div class="col-md-10">
+                    <input class="form-control" type="text" id="cpf" placeholder="CPF (Requerido)" formControlName="cpf" />
+                </div>
+            </div>            
+
+            <div class="form-group">
+                <label for="" class="col-md-2 control-label" for="email">Email</label>
+                <div class="col-md-10">
+                    <input class="form-control" type="text" id="email" placeholder="Email (Requerido)" formControlName="email" />
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="" class="col-md-2 control-label" for="senha">Senha</label>
+                <div class="col-md-10">
+                    <input class="form-control" type="password" id="senha" placeholder="Senha (Requerido)" formControlName="senha" />
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="" class="col-md-2 control-label" for="senhaConfirmacao">Confirme a Senha</label>
+                <div class="col-md-10">
+                    <input class="form-control" type="password" id="senhaConfirmacao" placeholder="Confirmar Senha (Requerido)" formControlName="senhaConfirmacao" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-4 col-md-offset-2">
+                    <span><button class="btn btn-success" id="registrar" type="submit">Registrar</button></span>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
