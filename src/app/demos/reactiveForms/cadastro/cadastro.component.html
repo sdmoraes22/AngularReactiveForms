@@ -22,7 +22,10 @@
             <div class="form-group">
                 <label for="" class="col-md-2 control-label" for="cpf">CPF</label>
                 <div class="col-md-10">
-                    <input class="form-control" type="text" id="cpf" placeholder="CPF (Requerido)" formControlName="cpf" />
+                    <input class="form-control" type="text" id="cpf" placeholder="CPF (Requerido)" formControlName="cpf" cpf [textMask]="{ mask: MASKS.cpf.textMask }"/>
+                    <span class="text-danger" *ngIf="cadastroForm.get('cpf')?.errors && (cadastroForm.get('cpf')?.dirty || cadastroForm.get('cpf')?.touched)" >
+                        <p>CPF inválido</p>
+                    </span>
                 </div>
             </div>            
 
@@ -48,6 +51,9 @@
                 <label for="" class="col-md-2 control-label" for="senha">Senha</label>
                 <div class="col-md-10">
                     <input class="form-control" type="password" id="senha" placeholder="Senha (Requerido)" formControlName="senha" />
+                    <span class="text-danger" *ngIf="cadastroForm.get('senha')?.errors?.rangeLength && (cadastroForm.get('senha')?.dirty || cadastroForm.get('senha')?.touched)" >
+                        <p>Tamanho inválido</p>
+                    </span>
                 </div>
             </div>
             
